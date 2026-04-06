@@ -222,7 +222,6 @@
             height: 80px;
             width: auto;
             margin-bottom: var(--space-sm);
-            filter: brightness(0) invert(1);
         }
 
         .hero__label { color: var(--color-gold); margin-bottom: var(--space-sm); display: inline-block; }
@@ -1143,16 +1142,13 @@
     </div>
 
     <div class="dual-image">
-        <div class="dual-image__item">
-            <img src="images/fogo-de-chao.jpg" alt="Fogo de Chão — restaurant" loading="lazy">
-            <div class="dual-image__caption">
-                <p class="dual-image__caption-text">🇧🇷 Fogo de Chão, Copley Square</p>
-            </div>
+        <div class="dual-image__item" style="background: #000; display: flex; align-items: center; justify-content: center;">
+            <img src="images/fogo-de-chao.jpg" alt="Fogo de Chão logo" loading="lazy" style="position: static; width: 80%; max-width: 400px; height: auto; object-fit: contain;">
         </div>
         <div class="dual-image__item">
             <img src="images/fogo-de-chao-2.jpg" alt="Fogo de Chão — churrasco" loading="lazy">
             <div class="dual-image__caption">
-                <p class="dual-image__caption-text">Fire-roasted churrasco in the gaucho tradition</p>
+                <p class="dual-image__caption-text">🇧🇷 Fire-roasted churrasco in the gaucho tradition</p>
             </div>
         </div>
     </div>
