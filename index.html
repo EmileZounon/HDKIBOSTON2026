@@ -726,6 +726,7 @@
             .dining-interlude__image { min-height: 220px; order: 2; }
             .section-split__content { order: 1; }
             .section-split__image { order: 2; }
+            .hotel-checkin-image { display: none; }
             .nav__brand { font-size: 0.6rem; letter-spacing: 0.12em; }
             .nav__brand img { height: 22px; }
             .nav__links { gap: var(--space-xs); }
@@ -834,13 +835,13 @@
         <span class="label reveal" style="color: var(--color-gold); letter-spacing: 0.2em; margin-top: var(--space-sm); display: block;">Organizers</span>
         <div class="instructors__grid" style="margin-top: var(--space-sm);">
             <div class="instructor reveal reveal-delay-2">
-                <img src="images/cassiano-organizer.jpg" alt="Anselmo Cassiano" class="instructor__photo instructor__photo--secondary">
-                <p class="instructor__name">Anselmo Cassiano</p>
+                <img src="images/vazrik-new.jpg" alt="Vazrik Chiloyan" class="instructor__photo instructor__photo--secondary" style="object-position: center 15%;">
+                <p class="instructor__name">Sensei Vazrik Chiloyan</p>
                 <p class="instructor__role">Co-Organizer</p>
             </div>
             <div class="instructor reveal reveal-delay-3">
-                <img src="images/vazrik-new.jpg" alt="Vazrik Chiloyan" class="instructor__photo instructor__photo--secondary" style="object-position: center 15%;">
-                <p class="instructor__name">Sensei Vazrik Chiloyan</p>
+                <img src="images/cassiano-organizer.jpg" alt="Anselmo Cassiano" class="instructor__photo instructor__photo--secondary">
+                <p class="instructor__name">Anselmo Cassiano</p>
                 <p class="instructor__role">Co-Organizer</p>
             </div>
         </div>
@@ -900,8 +901,8 @@
     </div>
 
     <!-- HOTEL CHECK-IN -->
-    <div class="section-split bg-cream">
-        <div class="section-split__image">
+    <div class="section-split bg-cream" id="hotel-checkin">
+        <div class="section-split__image hotel-checkin-image">
             <img src="images/la-quinta-hotel.jpg" alt="La Quinta Inn — Assembly Row" loading="lazy">
         </div>
         <div class="section-split__content">
