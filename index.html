@@ -197,7 +197,7 @@
         .hero__bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/boston-skyline.webp');
+            background-image: url('images/boston-night.webp');
             background-size: cover;
             background-position: center 40%;
             background-attachment: fixed;
@@ -710,23 +710,53 @@
            ======================================== */
         @media (max-width: 768px) {
             .hero__bg, .section-hero__img { background-attachment: scroll; }
+            .hero { min-height: 500px; }
+            .hero__content { padding: var(--space-lg) var(--space-sm) var(--space-md); }
+            .hero__meta { flex-direction: column; gap: var(--space-xs); }
             .section-split { grid-template-columns: 1fr; }
             .section-split--reverse { direction: ltr; }
-            .section-split__image { min-height: 300px; }
+            .section-split__image { min-height: 250px; }
             .section-split__content { padding: var(--space-md); }
+            .section-hero { height: 55vh; min-height: 350px; }
+            .section-hero--short { height: 40vh; min-height: 280px; }
+            .section-hero--medium { height: 50vh; min-height: 320px; }
             .dual-image { grid-template-columns: 1fr; }
-            .dual-image__item { height: 40vh; }
+            .dual-image__item { height: 35vh; min-height: 220px; }
             .dining-interlude { grid-template-columns: 1fr; }
+            .dining-interlude__content { padding: var(--space-md); }
+            .dining-interlude__image { min-height: 220px; }
             .nav__brand { font-size: 0.6rem; letter-spacing: 0.12em; }
-            .nav__links { gap: var(--space-sm); }
-            .nav__link { font-size: 0.65rem; }
-            .hero__content { padding: var(--space-lg) var(--space-sm) var(--space-md); }
-            .instructor__photo--lead { width: 180px; height: 180px; }
-            .instructor__photo--secondary { width: 150px; height: 150px; }
+            .nav__brand img { height: 22px; }
+            .nav__links { gap: var(--space-xs); }
+            .nav__link { font-size: 0.6rem; letter-spacing: 0.08em; }
+            .instructors { padding: var(--space-lg) var(--space-sm); }
+            .instructors__grid { gap: var(--space-md); }
+            .instructor__photo--lead { width: 160px; height: 160px; }
+            .instructor__photo--secondary { width: 130px; height: 130px; }
+            .day-divider { padding: var(--space-lg) var(--space-sm); }
+            .closing { padding: var(--space-xl) var(--space-sm); }
+            .highlight-points { font-size: 0.85rem; }
+            .panelists { gap: 0.4rem; }
+            .panelist__name { font-size: 0.85rem; }
         }
 
         @media (max-width: 480px) {
             .nav__brand span { display: none; }
+            .hero__title { font-size: clamp(2.2rem, 10vw, 3rem); }
+            .hero__subtitle { font-size: 1rem; }
+            .heading-lg { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+            .heading-md { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+            .section-split__desc { font-size: 0.9rem; }
+            .dining-interlude__title { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+            .dining-interlude__desc { font-size: 0.85rem; }
+            .instructor__photo--lead { width: 140px; height: 140px; }
+            .instructor__photo--secondary { width: 110px; height: 110px; }
+        }
+
+        @media (max-width: 360px) {
+            .nav__brand img { height: 18px; }
+            .nav__link { font-size: 0.55rem; }
+            .hero__content { padding: var(--space-md) var(--space-xs) var(--space-sm); }
         }
     </style>
 </head>
@@ -737,7 +767,7 @@
          ========================================== -->
     <nav class="nav" id="nav">
         <a href="#hero" class="nav__brand">
-            <span style="font-weight: 800; font-size: 0.85rem; color: var(--color-gold);">HDKI</span>
+            <img src="images/hdki-logo.jpg" alt="HDKI" style="height: 28px; width: auto;">
             <span>Boston Seminar 2026</span>
         </a>
         <ul class="nav__links">
@@ -755,7 +785,7 @@
         <div class="hero__bg" role="img" aria-label="Boston skyline at dusk"></div>
         <div class="hero__overlay"></div>
         <div class="hero__content">
-            <span class="reveal" style="font-family: var(--font-display); font-weight: 800; font-size: 1.8rem; color: var(--color-gold); letter-spacing: 0.15em; display: block; margin-bottom: var(--space-sm);">HDKI</span>
+            <img src="images/hdki-logo.jpg" alt="HDKI" class="reveal" style="height: 80px; width: auto; margin-bottom: var(--space-sm);">
             <span class="label hero__label reveal reveal-delay-1">HDKI International Seminar</span>
             <h1 class="heading-xl hero__title reveal reveal-delay-2">Boston HDKI<br>Seminar 2026</h1>
             <p class="hero__subtitle reveal reveal-delay-3">Karate, Culture &amp; Community in Cambridge &amp; Boston</p>
@@ -789,7 +819,7 @@
                 <p class="instructor__role">Lead Instructor</p>
             </div>
             <div class="instructor reveal reveal-delay-3">
-                <img src="images/nataliya-pidkovka.jpg" alt="Nataliya Pidkovka" class="instructor__photo instructor__photo--secondary">
+                <img src="images/nataliya-bo.jpg" alt="Nataliya Pidkovka" class="instructor__photo instructor__photo--secondary">
                 <p class="instructor__name">Nataliya Pidkovka</p>
                 <p class="instructor__role">Instructor</p>
             </div>
@@ -808,7 +838,7 @@
                 </a>
             </div>
             <div class="instructor reveal reveal-delay-3">
-                <img src="images/vazrik-organizer.jpg" alt="Vazrik" class="instructor__photo instructor__photo--secondary">
+                <img src="images/vazrik-new.jpg" alt="Vazrik" class="instructor__photo instructor__photo--secondary">
                 <p class="instructor__name">Vazrik</p>
                 <p class="instructor__role">Organizer</p>
             </div>
